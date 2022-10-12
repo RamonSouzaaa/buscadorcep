@@ -1,0 +1,145 @@
+#principal {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 600px;
+  text-align: center;
+}
+
+#principal .titulo{
+  color: var(--cor-terciaria);
+  font-family: var(--tipografia);
+  font-size: 5.3rem;
+  font-weight: 700;
+  line-height: 103px;
+}
+
+#principal .formulario {
+  display: flex;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 20%);
+  border: 1px solid rgba(255, 255, 255, 50%);
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.45);
+}
+
+#principal .formulario > input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #F1F1F1;
+  font-family: var(--tipografia);
+  font-size: 1rem;
+}
+
+#principal .formulario > input::placeholder{
+  color: #F1F1F1;
+  font-family: var(--tipografia);
+  font-size: 1rem;
+}
+
+#principal .formulario > input:focus {
+  outline: none;
+}
+
+#principal .formulario > button {
+  color: white;
+  background-color: transparent;
+  border:0;
+}
+
+#principal .dados{
+  width: 100%;
+  background-color: var(--cor-terciaria);
+  font-family: var(--tipografia);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+#principal .dados > h3{
+  font-size: 2rem;
+  margin-top:31px;
+}
+
+#principal .dados > p{
+  margin-top:18px;
+}
+
+#principal .dados > p:last-child{
+  margin-bottom:31px;
+}
+
+.mensagem {
+  font-family: var(--tipografia);
+  padding:7px;
+  border-radius:10px;
+  word-break: break-word;
+}
+
+.erro{
+  background-color: var(--cor-erro);
+  color:white;
+}
+
+.aviso{
+  background-color: var(--cor-aviso);
+  color:var(--cor-primaria);
+}
+
+@media screen and (max-width: 744px ) {
+  #principal .titulo {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 653px ) {
+  #principal .titulo {
+    font-size: 4.5rem;
+  }
+
+  #principal .formulario {
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 653px ) {
+  #principal {
+      width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 515px ) {
+  #principal .titulo {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 455px ) {
+
+  #principal .titulo {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 420px ) {
+
+  #principal .titulo {
+    font-size: 3rem;
+  }
+
+  #principal .formulario {
+    margin-top:-15px;
+  }
+}
+
+@media screen and (max-width: 367px ) {
+ #principal .titulo {
+    font-size: 2.5rem;
+  }
+}

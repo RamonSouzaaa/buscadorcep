@@ -1,0 +1,19 @@
+<div id="principal">
+  <h1 class="titulo">Buscador CEP</h1>
+  <form [formGroup]="form" (ngSubmit)="buscar()" class="formulario">
+    <input type="text" formControlName="cep" placeholder="Digite seu cep.." maxlength="8">
+    <button type="submit">
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+  <div *ngIf="cep && !erro.mensagem" class="dados">
+    <h3>CEP: {{cep.cep}}</h3>
+    <p>{{cep.logradouro}}</p>
+    <p>Complemento: {{cep.complemento}}</p>
+    <p>{{cep.bairro}}</p>
+    <p>{{cep.localidade}} - {{cep.uf}}</p>
+  </div>
+  <div *ngIf="erro.mensagem" [class]="erro.tipo === 1 ? 'erro' : 'aviso'" class="mensagem">
+    <span>{{erro.mensagem}}</span>
+  </div>
+</div>
